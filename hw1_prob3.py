@@ -9,7 +9,7 @@ import numpy as np
 import matplotlib.pyplot as plt 
 from scipy.linalg import expm 
 
-debug = True
+debug = False
 # Params and IC
 Ix, Iy, Iz = 500, 750, 1000 # kgm**3 
 p0 = 20 # rad/s
@@ -51,7 +51,6 @@ plt.plot(time, delr,label='delr')
 plt.legend()
 plt.xlabel('Time (sec)')
 plt.ylabel('x(t)')
-plt.title('Satellite Perturbation Response')
+plt.ylim([-.3,.3])
+plt.title('Linearized Satellite Perturbation Response')
 plt.show()
-    
-
